@@ -77,16 +77,18 @@
         padding-top: 2rem;
     }
     .transcript-output p#details {
+        font-family: 'Satoshi-Variable', sans-serif !important;
         font-weight: bold;
         text-transform: uppercase;
         opacity: 0.55;
         font-size: 14px;
         margin-top: 2rem;
+        margin-bottom: 0.85rem;
         font-weight: 700 !important;
     }
     .transcript-content {
         position: relative;
-        margin-top: 1rem
+        margin-top: 1.5rem
     }
     /* .transcript-content:before {
         content: '';
