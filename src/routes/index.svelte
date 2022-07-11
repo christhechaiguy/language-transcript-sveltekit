@@ -2,7 +2,7 @@
      import { onMount } from 'svelte'
 	import { marked } from 'marked'
     import "carbon-components-svelte/css/white.css"
-    // import "$lib/styles/fonts/Satoshi/css/satoshi.css"
+    import "$lib/styles/fonts/Satoshi/css/satoshi.css"
     import {
     Form,
     FormGroup,
@@ -82,6 +82,7 @@
         opacity: 0.55;
         font-size: 14px;
         margin-top: 2rem;
+        font-weight: 700 !important;
     }
     .transcript-content {
         position: relative;

@@ -5,9 +5,18 @@
 </main>
 
 <style>
-    /* :global(*) {
-        font-family: 'Satoshi-Variable';
-    } */
+    :global(*) {
+        font-family: 'Satoshi-Variable', sans-serif !important;
+    }
+
+    :global(h1) {
+        font-weight: 700 !important;
+    }
+
+    :global(p) {
+        font-family: 'Noto Sans', sans-serif !important;
+        font-weight: 400 !important;
+    }
 
     main {
         padding: 5rem 0;
@@ -21,6 +30,9 @@
     }
 
     @media print {
+        :global(*) {
+            color: #000000;
+        }
         main {
             padding: 0;
         }
