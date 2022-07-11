@@ -19,6 +19,10 @@
 	let author = '';
 	let content = '';
 
+    function print() {
+        window.print()
+    }
+
     // onMount(() => {
     //     $: transcriptTitle = data.title
     // }
@@ -33,12 +37,22 @@
     //     console.log(data)
     // }
 
-
 </script>
 <div class="transcript-output">
-    <p id="author">{author}</p>
+    {#if content != ''}
+        <div id="btn-print">
+            <Button on:click={print}>Print Transcript</Button>
+        </div>
+    {/if}
+    <p id="details">
+        <span id="author">{author}</span>
+        {#if author != '' && date != ''}
+        <span> | </span>
+        {/if}
+        <span id="date">{date}</span>
+    </p>
     <h1>{title}</h1>
-    <p id="date">{date}</p>
+    
     <div class="transcript-content">
         {@html marked(content)}
     </div>
@@ -62,11 +76,12 @@
         grid-template-rows: 1fr;
         padding-top: 2rem;
     }
-    .transcript-output p#author {
+    .transcript-output p#details {
         font-weight: bold;
         text-transform: uppercase;
         opacity: 0.55;
         font-size: 14px;
+        margin-top: 2rem;
     }
     .transcript-content {
         position: relative;
@@ -88,6 +103,6 @@
         line-height: 3;
     }
     @media print {
-        .input-el { display: none }
+        .input-el, #btn-print { display: none }
     }
 </style>

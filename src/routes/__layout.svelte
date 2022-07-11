@@ -7,10 +7,6 @@
 <style>
     /* :global(*) {
         font-family: 'Satoshi-Variable';
-    }
-
-    :global(h1) {
-        font-weight: 800;
     } */
 
     main {
@@ -22,5 +18,11 @@
         width: 100%;
         padding: 0 15px;
         margin: 0 auto;
+    }
+
+    @media print {
+        main {
+            padding: 0;
+        }
     }
 </style>
